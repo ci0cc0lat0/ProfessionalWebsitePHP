@@ -1,0 +1,7 @@
+DB_TYPE='mysql'
+DB_SERVERS='db'
+DB='antpro'
+DB_PORT='3306'
+DB_CHARSET='utf8mb4'
+DB_USER='antman'
+DB_PW='9913'

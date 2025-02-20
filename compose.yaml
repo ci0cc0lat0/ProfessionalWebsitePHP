@@ -1,0 +1,33 @@
+name: pro_website
+services:
+  php:
+    build: .
+    image: php8.3-pdo
+    ports:
+    - "8080:80"
+    volumes:
+    - ./:/var/www/html/
+  db:
+    image: mysql:5.7
+    restart: always
+    env_file:
+    - .env
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOTPW}
+    ports:
+    - '3306:3306'
+    volumes:
+      - ant-db:/var/lib/mysql
+  php-admin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8081:80'
+    environment:
+      - PMA_ARBITRARY=1
+
+volumes:
+  ant-db:

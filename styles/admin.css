@@ -1,0 +1,134 @@
+:root{
+  --section-bg: #8888aa;
+  --page-max-width:1400px;
+  --off-white: #e8e8e8;
+  --about-links-bg: #666688;
+  --font-size: 16px;
+  --grid-max: 400px;
+  --padding-5per: 5rem;
+
+}
+
+.signin_wrapper{
+  max-width: var(--page-max-width);
+  padding:12px
+}
+.signin_wrapper{
+  margin: 4rem auto;
+  text-align: left;
+  background-color: var(--section-bg);
+  min-width: 300px;
+  max-width: var(--grid-max);
+}
+form > * {
+  display: block;
+  width: 100%;
+}
+form > input{
+  box-sizing: border-box;
+  padding: 5px ;
+  margin:  0 0 1rem 0;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+input[type=submit]{
+  margin:0;
+}
+
+
+/* VIEW */
+.main_view_wrapper{
+  max-width: var(--page-max-width);
+  padding:0 25px ;
+  margin: auto;
+}
+.main_view_container{
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
+}
+.article_item{
+  display: block;
+  min-height: 100px;
+  padding: 10px;
+  background-color: var(--section-bg);
+  position: relative;
+}
+.article_item > *{
+  margin: 0 120px;
+}
+.article_item > img{
+  margin: 0 ;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 10px;
+  left: 10px;
+}
+
+.article_delete{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0px;
+  padding: 10px;
+}
+/* new_post */
+
+.form_wrapper{
+  max-width: var(--page-max-width);
+  margin: 4rem auto;
+}
+.form_container{
+  position: relative;
+  padding: 1%;
+  margin: auto;
+  background-color: var(--section-bg);
+  min-width: 300px;
+  max-width: var(--grid-max);
+}
+.return_page{
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+.return_page > a{
+  color: black;
+}
+.form_defaults > *{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+
+}
+.form_defaults > input{
+  margin:  0 0 1rem 0;
+
+}
+textarea{
+  resize: vertical;
+  height: 100px;
+}
+/* article_edit */
+.edit_wrapper{
+  max-width: 900px;
+  margin: auto;
+}
+.edit_container{
+  width: 100%;
+  background-color: var(--section-bg);
+  padding: 1%;
+  margin: auto;
+}
+.edit_form{
+  width: 100%;
+}
