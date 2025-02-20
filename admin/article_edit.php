@@ -24,7 +24,7 @@
         if($moved){echo "Moved";}
         else{echo "not moved";}
 
-        echo "made it here";
+        //echo "made it here";
       }
       else{
         $image_update = $result['thumbnail'];
