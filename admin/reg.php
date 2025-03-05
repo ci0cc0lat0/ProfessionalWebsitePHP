@@ -3,24 +3,38 @@
   include '../includes/db-connect.php';
   include '../includes/functions.php';
   include '../includes/header.php';
-?>
-<head>
-  <link rel="stylesheet" href="../styles/style.css">
-</head>
-<?php
-  if($_SERVER["REQUEST_METHOD"] == 'POST'){
-    $email = $_POST['email'];
-    $pw = $_POST['password'];
-    $hash = password_hash($pw,PASSWORD_BCRYPT);
-    $sql = 'INSERT INTO admin (email, password_hash) VALUES (:email, :hash);';
-    $statement = pdo($pdo, $sql,
-    ['email'=>$email,
-    ':hash'=>$hash]);
-    echo "success";
+  ?>
+  <head>
+      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+
+  <?php
+    if($_SERVER["REQUEST_METHOD"] == 'POST'){
+      $email = $_POST['email'];
+      $pw = $_POST['password'];
+      $hash = password_hash($pw,PASSWORD_BCRYPT);
+      $sql = 'INSERT INTO admin (email, password_hash) VALUES (:email, :hash);';
+      $statement = pdo($pdo, $sql,
+      ['email'=>$email,
+      ':hash'=>$hash]);
+      echo "success";
+    }
+  ?>
+  <?php
+    $sql = 'SELECT * from admin;';
+    $result = pdo($pdo,$sql)->fetchAll();
+    if($result){
+      echo "Admin successfully added";
+      exit;
+      }
+      else{
+        echo "No admin creds present";
+      }
+  ?>
 
 
-  }
-?>
+
+
 <div class="signup_wrapper">
   <div>
     <form action="reg.php" method="post">
