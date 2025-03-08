@@ -10,6 +10,7 @@
       <h1>About Me</h1>
       <img src="public/newpfp.png">
       <p>
+        Live test edit
       I am a Fullstack developer who is seasoned in PHP, the LAMP stack, JavaScript, NextJS, NodeJS, and Strapi. I like building websites, connecting the pieces together, and bringing projects to life.
       <br><br>
       I enjoy tinkering with servers and virtual machines, learning new web tools and diving into data analytics.
